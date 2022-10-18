@@ -329,6 +329,14 @@ class URL:
         """
         return not self.is_absolute_url
 
+    @property
+    def string(self) -> str:
+        """
+        Return the URL as a string.
+        """
+        return str(self)
+        
+
     def copy_with(self, **kwargs: typing.Any) -> "URL":
         """
         Copy this URL, returning a new URL with some components altered.
